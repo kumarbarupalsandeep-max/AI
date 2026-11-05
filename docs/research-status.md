@@ -8,10 +8,10 @@
 
 | No. | Chapter | Status | Main coverage |
 |---:|---|---|---|
-| 01 | AI Fundamentals | Covered in current notes | Definition, history, types, workflow, components, applications, limitations |
-| 02 | Mathematics & Statistics for AI | Covered in current notes | Basic maths, algebra, linear algebra, statistics, probability, calculus, optimization, information theory |
-| 03 | Python Programming for AI | Pending | Python basics, functions, OOP, libraries, notebooks, practical coding |
-| 04 | Data Engineering for AI | Pending | Data collection, cleaning, labeling, pipelines, storage, governance |
+| 01 | AI Fundamentals | Covered | Definition, history, types, workflow, components, applications, limitations |
+| 02 | Mathematics & Statistics for AI | Covered | Basic maths, algebra, linear algebra, statistics, probability, calculus, optimization, information theory |
+| 03 | Python Programming for AI | Covered | Syntax, variables, data types, conditions, loops, functions, OOP, errors, AI libraries, workflows, practice project |
+| 04 | Data Engineering for AI | Next | Data collection, cleaning, labeling, pipelines, storage, governance |
 | 05 | Machine Learning | Pending | Supervised, unsupervised, reinforcement learning, algorithms, evaluation |
 | 06 | Deep Learning | Pending | Neural networks, backpropagation, CNN, RNN, Transformers |
 | 07 | Generative AI & LLM | Pending | Tokens, embeddings, tokenization, pretraining, fine-tuning, prompting, RAG, multimodal models |
@@ -26,6 +26,7 @@
 - Project README and chapter roadmap created.
 - Chapter 01: AI Fundamentals notes created.
 - Chapter 02: Mathematics & Statistics for AI notes created.
+- Chapter 03: Python Programming for AI notes created.
 - Learning resource index created.
 - Research status tracker created.
 
@@ -44,4 +45,4 @@
 
 ## Next step
 
-Chapter 03 — Python Programming for AI.
+Chapter 04 — Data Engineering for AI.
