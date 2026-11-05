@@ -14,8 +14,8 @@
 | 04 | Data Engineering for AI | Covered | Data types, collection, ingestion, cleaning, transformation, storage, ETL/ELT, pipelines, labeling, features, governance |
 | 05 | Machine Learning | Covered | Learning types, classification/regression, algorithms, training, evaluation, validation, tuning, Iris practice project |
 | 06 | Deep Learning | Covered | Neural networks, weights/bias, activation, forward/backpropagation, optimizers, ANN/CNN/RNN/LSTM/Transformers, transfer learning, MNIST project |
-| 07 | Generative AI & LLM | Next | Tokens, embeddings, tokenization, pretraining, fine-tuning, prompting, RAG, multimodal models |
-| 08 | AI Agents & Automation | Pending | Tools, planning, memory, orchestration, workflows, multi-agent systems |
+| 07 | Generative AI & LLM | Covered | Tokens, tokenization, embeddings, Transformers, pretraining, fine-tuning, prompting, context, RAG, multimodal AI, API architecture, knowledge assistant |
+| 08 | AI Agents & Automation | Next | Agents, tools, planning, memory, orchestration, workflows, multi-agent systems |
 | 09 | AI Development & Architecture | Pending | Frontend, backend, APIs, model serving, databases, system design |
 | 10 | AI Infrastructure & Deployment | Pending | GPU/CPU, cloud, containers, MLOps, monitoring, scaling |
 | 11 | AI Security, Privacy & Governance | Pending | Threats, prompt injection, data protection, evaluation, compliance, responsible AI |
@@ -30,6 +30,7 @@
 - Chapter 04: Data Engineering for AI notes created.
 - Chapter 05: Machine Learning notes created.
 - Chapter 06: Deep Learning notes created.
+- Chapter 07: Generative AI & LLM notes created.
 - Learning resource index created.
 - Research status tracker created.
 
@@ -48,4 +49,4 @@
 
 ## Next step
 
-Chapter 07 — Generative AI & Large Language Models.
+Chapter 08 — AI Agents & Automation.
