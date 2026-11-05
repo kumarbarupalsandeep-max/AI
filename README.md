@@ -20,8 +20,8 @@ AI ko Basic se Advanced level tak step-by-step samajhna: AI kaise kaam karta hai
 | 03 | Python Programming for AI | Covered |
 | 04 | Data Engineering for AI | Covered |
 | 05 | Machine Learning | Covered |
-| 06 | Deep Learning | Next |
-| 07 | Generative AI & Large Language Models | Planned |
+| 06 | Deep Learning | Covered |
+| 07 | Generative AI & Large Language Models | Next |
 | 08 | AI Agents & Automation | Planned |
 | 09 | AI Development & System Architecture | Planned |
 | 10 | AI Infrastructure, MLOps & Deployment | Planned |
@@ -35,6 +35,7 @@ AI ko Basic se Advanced level tak step-by-step samajhna: AI kaise kaam karta hai
 - docs/03-python-programming-for-ai.md — Python basics, OOP, AI libraries, workflows and practice project.
 - docs/04-data-engineering-for-ai.md — Data types, ingestion, cleaning, ETL/ELT, pipelines, storage, labeling and governance.
 - docs/05-machine-learning.md — ML types, algorithms, training, evaluation, common risks and Iris project.
+- docs/06-deep-learning.md — Neural networks, activation functions, backpropagation, architectures and MNIST project.
 - docs/learning-resources.md — Official documentation and learning links.
 - docs/research-status.md — Progress tracker and next research tasks.
 
