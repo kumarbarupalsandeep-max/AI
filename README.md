@@ -18,8 +18,8 @@ AI ko Basic se Advanced level tak step-by-step samajhna: AI kaise kaam karta hai
 | 01 | AI Fundamentals | Covered |
 | 02 | Mathematics & Statistics for AI | Covered |
 | 03 | Python Programming for AI | Covered |
-| 04 | Data Engineering for AI | Next |
-| 05 | Machine Learning | Planned |
+| 04 | Data Engineering for AI | Covered |
+| 05 | Machine Learning | Next |
 | 06 | Deep Learning | Planned |
 | 07 | Generative AI & Large Language Models | Planned |
 | 08 | AI Agents & Automation | Planned |
@@ -33,6 +33,7 @@ AI ko Basic se Advanced level tak step-by-step samajhna: AI kaise kaam karta hai
 - docs/01-ai-fundamentals.md — AI introduction, history, types, workflow, use cases and limitations.
 - docs/02-mathematics-statistics-for-ai.md — Maths concepts used in AI with examples and formulas.
 - docs/03-python-programming-for-ai.md — Python basics, OOP, AI libraries, workflows and practice project.
+- docs/04-data-engineering-for-ai.md — Data types, ingestion, cleaning, ETL/ELT, pipelines, storage, labeling and governance.
 - docs/learning-resources.md — Official documentation and learning links.
 - docs/research-status.md — Progress tracker and next research tasks.
 
