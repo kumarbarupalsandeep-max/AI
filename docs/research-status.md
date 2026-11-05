@@ -13,8 +13,8 @@
 | 03 | Python Programming for AI | Covered | Syntax, variables, data types, conditions, loops, functions, OOP, errors, AI libraries, workflows, practice project |
 | 04 | Data Engineering for AI | Covered | Data types, collection, ingestion, cleaning, transformation, storage, ETL/ELT, pipelines, labeling, features, governance |
 | 05 | Machine Learning | Covered | Learning types, classification/regression, algorithms, training, evaluation, validation, tuning, Iris practice project |
-| 06 | Deep Learning | Next | Neural networks, backpropagation, CNN, RNN, Transformers |
-| 07 | Generative AI & LLM | Pending | Tokens, embeddings, tokenization, pretraining, fine-tuning, prompting, RAG, multimodal models |
+| 06 | Deep Learning | Covered | Neural networks, weights/bias, activation, forward/backpropagation, optimizers, ANN/CNN/RNN/LSTM/Transformers, transfer learning, MNIST project |
+| 07 | Generative AI & LLM | Next | Tokens, embeddings, tokenization, pretraining, fine-tuning, prompting, RAG, multimodal models |
 | 08 | AI Agents & Automation | Pending | Tools, planning, memory, orchestration, workflows, multi-agent systems |
 | 09 | AI Development & Architecture | Pending | Frontend, backend, APIs, model serving, databases, system design |
 | 10 | AI Infrastructure & Deployment | Pending | GPU/CPU, cloud, containers, MLOps, monitoring, scaling |
@@ -29,6 +29,7 @@
 - Chapter 03: Python Programming for AI notes created.
 - Chapter 04: Data Engineering for AI notes created.
 - Chapter 05: Machine Learning notes created.
+- Chapter 06: Deep Learning notes created.
 - Learning resource index created.
 - Research status tracker created.
 
@@ -47,4 +48,4 @@
 
 ## Next step
 
-Chapter 06 — Deep Learning.
+Chapter 07 — Generative AI & Large Language Models.
