@@ -11,8 +11,8 @@
 | 01 | AI Fundamentals | Covered | Definition, history, types, workflow, components, applications, limitations |
 | 02 | Mathematics & Statistics for AI | Covered | Basic maths, algebra, linear algebra, statistics, probability, calculus, optimization, information theory |
 | 03 | Python Programming for AI | Covered | Syntax, variables, data types, conditions, loops, functions, OOP, errors, AI libraries, workflows, practice project |
-| 04 | Data Engineering for AI | Next | Data collection, cleaning, labeling, pipelines, storage, governance |
-| 05 | Machine Learning | Pending | Supervised, unsupervised, reinforcement learning, algorithms, evaluation |
+| 04 | Data Engineering for AI | Covered | Data types, collection, ingestion, cleaning, transformation, storage, ETL/ELT, pipelines, labeling, features, governance |
+| 05 | Machine Learning | Next | Supervised, unsupervised, reinforcement learning, algorithms, evaluation |
 | 06 | Deep Learning | Pending | Neural networks, backpropagation, CNN, RNN, Transformers |
 | 07 | Generative AI & LLM | Pending | Tokens, embeddings, tokenization, pretraining, fine-tuning, prompting, RAG, multimodal models |
 | 08 | AI Agents & Automation | Pending | Tools, planning, memory, orchestration, workflows, multi-agent systems |
@@ -27,6 +27,7 @@
 - Chapter 01: AI Fundamentals notes created.
 - Chapter 02: Mathematics & Statistics for AI notes created.
 - Chapter 03: Python Programming for AI notes created.
+- Chapter 04: Data Engineering for AI notes created.
 - Learning resource index created.
 - Research status tracker created.
 
@@ -45,4 +46,4 @@
 
 ## Next step
 
-Chapter 04 — Data Engineering for AI.
+Chapter 05 — Machine Learning.
