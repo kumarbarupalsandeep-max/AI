@@ -22,8 +22,8 @@ AI ko Basic se Advanced level tak step-by-step samajhna: AI kaise kaam karta hai
 | 05 | Machine Learning | Covered |
 | 06 | Deep Learning | Covered |
 | 07 | Generative AI & Large Language Models | Covered |
-| 08 | AI Agents & Automation | Next |
-| 09 | AI Development & System Architecture | Planned |
+| 08 | AI Agents & Automation | Covered |
+| 09 | AI Development & System Architecture | Next |
 | 10 | AI Infrastructure, MLOps & Deployment | Planned |
 | 11 | AI Security, Privacy & Governance | Planned |
 | 12 | Real-World AI Products & Business | Planned |
@@ -37,6 +37,7 @@ AI ko Basic se Advanced level tak step-by-step samajhna: AI kaise kaam karta hai
 - docs/05-machine-learning.md — ML types, algorithms, training, evaluation, common risks and Iris project.
 - docs/06-deep-learning.md — Neural networks, activation functions, backpropagation, architectures and MNIST project.
 - docs/07-generative-ai-and-llms.md — LLMs, tokens, embeddings, Transformers, prompting, RAG, multimodal AI and knowledge assistant project.
+- docs/08-ai-agents-and-automation.md — Agents, tools, planning, memory, orchestration, multi-agent systems, guardrails and practical project.
 - docs/learning-resources.md — Official documentation and learning links.
 - docs/research-status.md — Progress tracker and next research tasks.
 
