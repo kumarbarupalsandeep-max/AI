@@ -15,8 +15,8 @@
 | 05 | Machine Learning | Covered | Learning types, classification/regression, algorithms, training, evaluation, validation, tuning, Iris practice project |
 | 06 | Deep Learning | Covered | Neural networks, weights/bias, activation, forward/backpropagation, optimizers, ANN/CNN/RNN/LSTM/Transformers, transfer learning, MNIST project |
 | 07 | Generative AI & LLM | Covered | Tokens, tokenization, embeddings, Transformers, pretraining, fine-tuning, prompting, context, RAG, multimodal AI, API architecture, knowledge assistant |
-| 08 | AI Agents & Automation | Next | Agents, tools, planning, memory, orchestration, workflows, multi-agent systems |
-| 09 | AI Development & Architecture | Pending | Frontend, backend, APIs, model serving, databases, system design |
+| 08 | AI Agents & Automation | Covered | Agent loop, tools/function calling, planning, memory/state, single/multi-agent, orchestration, workflows, human approval, guardrails, evaluation, practical project |
+| 09 | AI Development & Architecture | Next | Frontend, backend, APIs, model serving, databases, RAG integration, orchestration, security, multi-tenancy, scaling and testing |
 | 10 | AI Infrastructure & Deployment | Pending | GPU/CPU, cloud, containers, MLOps, monitoring, scaling |
 | 11 | AI Security, Privacy & Governance | Pending | Threats, prompt injection, data protection, evaluation, compliance, responsible AI |
 | 12 | AI Products & Business | Pending | AI SaaS, enterprise use cases, product strategy, costs, pricing, business models |
@@ -31,8 +31,9 @@
 - Chapter 05: Machine Learning notes created.
 - Chapter 06: Deep Learning notes created.
 - Chapter 07: Generative AI & LLM notes created.
+- Chapter 08: AI Agents & Automation notes created.
 - Learning resource index created.
-- Research status tracker created.
+- Research status tracker updated.
 
 ## Quality checklist for future chapters
 
@@ -49,4 +50,4 @@
 
 ## Next step
 
-Chapter 08 — AI Agents & Automation.
+Chapter 09 — AI Development & System Architecture.
