@@ -32,7 +32,8 @@
 | Phase 1 — AI Development Fundamentals | 05. Programming Languages for AI | Drafted |
 | Phase 1 — AI Development Fundamentals | 06. AI Development Tools | Drafted |
 | | 07. AI System Architecture | Drafted |
-| 08. Frontend Architecture | Next | |
+| 08. Frontend Architecture | Drafted |
+| 09. Backend Architecture | Next | |
 
 ## Completed repository work
 
@@ -45,7 +46,7 @@
 - Chapter 06: Deep Learning notes created.
 - Chapter 07: Generative AI & LLM notes created.
 - Chapter 08: AI Agents & Automation notes created.
-- Chapter 09: AI Development & System Architecture — Phase 1 Topics 01–06 and Phase 2 Topic 07 drafted and added.
+- Chapter 09: AI Development & System Architecture — Phase 1 Topics 01–06 and Phase 2 Topics 07–08 drafted and added.
 - Learning resource index created.
 - Research status tracker updated.
 
@@ -64,4 +65,4 @@
 
 ## Next step
 
-Chapter 09 — Phase 2, Topic 08: Frontend Architecture.
+Chapter 09 — Phase 2, Topic 09: Backend Architecture.
