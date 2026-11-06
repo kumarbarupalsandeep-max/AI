@@ -1064,3 +1064,294 @@ Ek basic AI FAQ application ke development environment ka plan banayein:
 ---
 
 **Progress:** Phase 1 Topics 01–06 drafted. Phase 2 — Topic 07: AI System Architecture is next.
+
+
+# Phase 2 — AI System Architecture
+
+## Topic 07 — AI System Architecture
+
+AI System Architecture ek blueprint hota hai jo batata hai ki AI application ke different parts kaise banenge, aapas mein kaise connect honge aur user request ko kaise process karenge. Jaise building banane se pehle uska map banaya jata hai, waise hi software develop karne se pehle architecture plan kiya jata hai.
+
+### 1. Main architecture components
+
+| Component | Simple meaning | Example |
+|---|---|---|
+| Frontend | User interface | Chat UI, dashboard |
+| API Gateway | Request routing and controls | API gateway |
+| Backend | Business rules and application logic | Python / Node.js service |
+| AI Model | Intelligent processing | LLM, vision or speech model |
+| AI Orchestrator | Model, tools and workflow coordination | Orchestration service |
+| Database | Structured information | PostgreSQL |
+| Vector Search | Meaning-based retrieval | pgvector, Qdrant |
+| File Storage | Documents and media | Object storage |
+| Infrastructure | Compute, network and deployment | Cloud, servers, GPU |
+| Monitoring | Errors and performance visibility | Metrics, logs, traces |
+| Security | Access and data protection | Authentication, encryption |
+
+These are logical components. Small products may combine several in one application; larger systems may separate them into services.
+
+### 2. Basic request flow
+
+1. User frontend par question submit karta hai.
+2. Frontend request backend API ko bhejta hai.
+3. API authentication aur permissions check karti hai.
+4. Backend input validate karta aur business rules apply karta hai.
+5. AI orchestration layer decide karti hai ki model, retrieval ya approved tool ki zaroorat hai.
+6. Model response generate karta hai.
+7. Backend output validate karke response return karta hai.
+8. Frontend answer display karta hai.
+9. Monitoring request latency, failures aur usage observe karti hai.
+
+### 3. Simplified architecture diagram
+
+```text
+User
+ |
+ v
+Frontend (Web / Mobile)
+ |
+ v
+API Gateway
+ |
+ v
+Backend Application
+ |            |
+ |            +---- Authentication / Permissions
+ |
+ v
+AI Orchestrator
+ |            |
+ |            +---- Knowledge Retrieval
+ |            |         |
+ |            |         v
+ |            |    Vector Search / Documents
+ |            |
+ |            v
+ |       Model API / Model Runtime
+ |
+ v
+Output Validation
+ |
+ v
+Frontend Response
+
+Database / File Storage support the application.
+Security and Monitoring apply across the system.
+```
+
+### 4. Main architecture styles
+
+**Monolithic Architecture**
+- Major application modules ek deployable application mein hote hain.
+- Initial development aur deployment relatively simple ho sakta hai.
+- Codebase grow hone par boundaries aur maintenance challenging ho sakti hain.
+
+**Layered Architecture**
+- Presentation, business logic, data access aur storage jaise layers.
+- Responsibilities separate aur code easier to understand ho sakta hai.
+- Layers ke beech clear boundaries maintain karna important hai.
+
+**Microservices Architecture**
+- Application multiple independently deployable services mein divide hoti hai.
+- Example: User Service, Billing Service, AI Service, Notification Service.
+- Independent scaling/deployment possible; network, monitoring aur operations complexity badhti hai.
+
+**Event-Driven Architecture**
+- Services events ke through loosely coupled communication karti hain.
+- Example: DocumentUploaded event se background processing start hoti hai.
+- Asynchronous workflows ke liye useful; duplicate events, ordering aur retries handle karne hote hain.
+
+**Serverless Architecture**
+- Cloud provider managed functions/services par code run hota hai.
+- Event-triggered workloads ke liye useful ho sakta hai.
+- Execution limits, cold starts, cost patterns aur provider dependency evaluate karein.
+
+| Style | Common fit |
+|---|---|
+| Monolithic | Small or early-stage application |
+| Layered | Clear separation of responsibilities |
+| Microservices | Large systems with independent service needs |
+| Event-driven | Background and asynchronous workflows |
+| Serverless | Event-triggered and variable workloads |
+
+### 5. AI Model Layer
+
+AI Model Layer application ki AI capabilities provide karti hai. Depending on product, ismein ye components ho sakte hain:
+
+1. LLM — language understanding and generation.
+2. Embedding Model — text/data ko vector representation mein convert karna.
+3. Vision Model — images/video frames analyze karna.
+4. Speech Model — audio transcription ya speech generation.
+5. Reranker — retrieved search results ko relevance ke hisaab se reorder karna.
+6. Model Router — task ke hisaab se model select karna.
+
+Har application ko ye saare models nahi chahiye. Product requirements ke hisaab se choose karein.
+
+### 6. AI Orchestration
+
+AI Orchestration workflow ke steps coordinate karti hai. Ye decide kar sakti hai:
+- Kaunsa model call hoga?
+- Kya knowledge search karni hai?
+- Kya approved tool execute karna hai?
+- Kya human approval chahiye?
+- Failure par retry ya fallback kaise hoga?
+
+Model ko unlimited database ya external system access na dein. Backend controlled permissions aur approved tools ke through access de.
+
+### 7. Data Architecture
+
+| Data type | Storage example | Use |
+|---|---|---|
+| User accounts and roles | Relational database | Identity and permissions |
+| Conversations | Relational/document database | Chat history |
+| Documents and media | Object storage | PDFs, images, audio |
+| Embeddings | Vector index/database | Semantic retrieval |
+| Temporary state | Cache | Short-lived data |
+| Logs and metrics | Observability platform | Operational monitoring |
+
+Different data types ke liye different storage components use ho sakte hain. Vector database authoritative business records ka automatic replacement nahi hai.
+
+### 8. RAG architecture — basic concept
+
+RAG ka full form Retrieval-Augmented Generation hai. Ismein system answer generate karne se pehle external knowledge source se relevant information retrieve karta hai.
+
+**Document preparation flow:**
+1. Approved documents collect karein.
+2. Text extract aur chunks mein divide karein.
+3. Embedding model se vectors banayein.
+4. Vectors aur metadata ko vector index mein store karein.
+
+**Question answering flow:**
+1. User question receive karein.
+2. Question ka embedding banayein.
+3. Relevant document chunks search karein.
+4. User permissions aur source access enforce karein.
+5. Relevant context model ko dein.
+6. Answer aur source references return karein.
+
+RAG answer quality improve karne mein help karta hai, lekin document freshness, permissions aur retrieved evidence ki relevance verify karni hoti hai.
+
+### 9. Security architecture
+
+1. Authentication — user identity verify karna.
+2. Authorization — permitted actions/data tak access dena.
+3. Encryption — data in transit aur at rest protect karna.
+4. Secrets management — API keys/passwords securely store karna.
+5. Input validation — invalid/malicious inputs check karna.
+6. Prompt injection defense — untrusted content ko trusted instruction na samajhna.
+7. Audit logs — sensitive actions ka record.
+8. Rate limiting — excessive requests control karna.
+9. Tenant/data isolation — customers ka data separate rakhna.
+10. Human approval — sensitive actions se pehle review.
+
+AI output ko automatically trusted nahi maana jana chahiye. High-impact operations ke liye validation, permission checks aur review rakhein.
+
+### 10. Scalability and reliability
+
+**Scalability techniques:**
+- Load balancing — requests ko multiple instances mein distribute karna.
+- Horizontal scaling — additional instances add karna.
+- Caching — frequently used data fast access karna.
+- Queues — heavy tasks background mein process karna.
+- GPU capacity planning — model workload ke liye compute allocate karna.
+- Model routing — task ke hisaab se suitable model select karna.
+
+**Reliability techniques:**
+- Timeouts — request ko indefinitely wait na karne dena.
+- Controlled retries — temporary failures par retry.
+- Circuit breaker — failing dependency ko repeated calls se protect karna.
+- Fallback — alternate response/service.
+- Backups — recoverable data copies.
+- Health checks — service availability observe karna.
+
+### 11. Example — Enterprise AI platform
+
+| Component | Responsibility |
+|---|---|
+| Web Dashboard | Employee interface |
+| API Gateway | Request routing and access controls |
+| Identity Service | Login, roles and permissions |
+| AI Orchestrator | Models and tools coordinate karna |
+| Model Service | AI inference requests |
+| Knowledge Service | Company documents search |
+| Agent Service | Approved multi-step workflows |
+| Relational Database | Users, settings and records |
+| Vector Database | Semantic document retrieval |
+| Object Storage | Documents and uploads |
+| Queue | Background processing |
+| Monitoring | Errors, latency and usage |
+| Cloud Infrastructure | Compute, network and deployment |
+
+Ye logical design example hai. Real deployment mein modules ko combine ya split kar sakte hain.
+
+### 12. Architecture design checklist
+
+1. Product ka main purpose kya hai?
+2. Expected users aur traffic kitna hai?
+3. Kaun se models/capabilities chahiye?
+4. Data kahan aur kitne time tak store hoga?
+5. User permissions kaise enforce hongi?
+6. Model/API fail hone par fallback kya hoga?
+7. Scaling aur performance needs kya hain?
+8. AI usage aur cost kaise monitor hogi?
+9. Sensitive data kaise protect hoga?
+10. Backup aur disaster recovery ka plan kya hai?
+
+### 13. Common mistakes
+
+- Requirement ke bina microservices introduce karna.
+- Frontend ko direct database access dena.
+- Model ko uncontrolled permissions dena.
+- Har request par unnecessary model calls karna.
+- Monitoring aur logs ignore karna.
+- Different customers ka data mix kar dena.
+- Failure handling aur backup plan na banana.
+- RAG retrieval ko verify kiye bina correct assume karna.
+
+### 14. Practice exercise
+
+Ek AI Customer Support Platform ka architecture design karein:
+- Frontend: chat interface.
+- Backend: authentication and business logic.
+- AI: question-answering model.
+- Database: customer and ticket records.
+- Knowledge: approved support documents.
+- Storage: uploaded files.
+- Security: role-based access.
+- Monitoring: errors and response time.
+
+Diagram mein arrows se show karein ki user request kaise travel karti hai.
+
+### 15. Knowledge check
+
+1. AI System Architecture kya hota hai?
+2. Frontend aur backend ka kya role hai?
+3. API Gateway ka kya kaam hai?
+4. Monolithic aur Microservices Architecture mein kya difference hai?
+5. AI Orchestration kya hota hai?
+6. RAG system mein Vector Database ka kya role hai?
+7. AI application mein security kyun zaroori hai?
+8. Load Balancing aur Caching mein kya difference hai?
+9. Human Approval kab useful hoti hai?
+10. Kya har AI application ko Microservices Architecture chahiye?
+
+### 16. Topic summary
+
+- AI System Architecture application ka complete blueprint hota hai.
+- Frontend, backend, API, AI model aur data layers milkar application banate hain.
+- Orchestration AI workflows coordinate karti hai.
+- RAG external knowledge se relevant information retrieve karta hai.
+- Security, scalability aur reliability architecture ke essential parts hain.
+- Architecture project requirements ke according choose karein; unnecessary complexity avoid karein.
+
+### Official learning references
+
+- AWS Architecture Center: https://aws.amazon.com/architecture/
+- Google Cloud Architecture Center: https://cloud.google.com/architecture
+- Microsoft Azure Architecture Center: https://learn.microsoft.com/en-us/azure/architecture/
+- Kubernetes Documentation: https://kubernetes.io/docs/
+- OpenTelemetry Documentation: https://opentelemetry.io/docs/
+
+---
+
+**Progress:** Phase 1 Topics 01–06 complete. Phase 2 Topic 07 drafted. Topic 08 — Frontend Architecture is next.
