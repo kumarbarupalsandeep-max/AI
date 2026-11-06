@@ -303,3 +303,262 @@ References further learning ke liye hain; notes kisi third-party documentation k
 ---
 
 **Progress:** Phase 1 Topics 01–03 drafted. Topic 04 — AI Development Stack is next.
+
+
+## Topic 04 — AI Development Stack
+
+AI Development Stack ka matlab un technologies aur tools ka group hai jinse AI application develop, test, deploy aur maintain hoti hai. Stack ka exact combination product ke size, team skills, budget, privacy aur performance needs par depend karta hai.
+
+### 1. AI application ki technology layers
+
+| Layer | Kya kaam karti hai? | Technology examples |
+|---|---|---|
+| Frontend | User interface | HTML, CSS, JavaScript, React, Vue |
+| Backend | Business logic aur requests | Python, Node.js, Java, .NET |
+| AI Frameworks | Model/application workflow | PyTorch, TensorFlow, Transformers |
+| Model Provider / Runtime | AI model run ya access | Hosted model APIs, vLLM, Ollama |
+| Database | Structured information | PostgreSQL, MySQL |
+| Vector Search | Similarity-based retrieval | pgvector, Milvus, Qdrant |
+| Cache | Frequently used data fast access | Redis |
+| API Layer | Services communication | REST, GraphQL, gRPC |
+| Storage | Files, images, datasets | Object storage, file systems |
+| Infrastructure | App run karne ke resources | Linux, Docker, Kubernetes, cloud |
+| DevOps / CI-CD | Build, test, release | GitHub Actions, CI pipelines |
+| Monitoring | Logs, metrics, traces | OpenTelemetry, Prometheus, Grafana |
+
+Ye examples hain, mandatory stack nahi. Har project ko har tool ki zaroorat nahi hoti.
+
+### 2. Frontend stack
+
+Frontend woh part hai jo user browser ya mobile app mein dekhta hai.
+
+**Core technologies:**
+- HTML: Page ka structure.
+- CSS: Layout, colors, responsive design.
+- JavaScript / TypeScript: Interactions aur application logic.
+- React / Vue / Angular: Component-based UI build karne ke options.
+
+**AI product UI features:**
+- Chat interface and conversation history.
+- File upload and preview.
+- Streaming response display.
+- Model selection.
+- Agent/workflow status.
+- Approval screen.
+- Usage and error feedback.
+
+Frontend mein API secrets ya private model keys store nahi karni chahiye. Requests authenticated backend ke through bhejein.
+
+### 3. Backend stack
+
+Backend application ka server-side part hai. Ye user request validate karta hai, permissions check karta hai, data access karta hai aur AI services ko call karta hai.
+
+**Common options:**
+- Python: AI/ML ecosystem aur data workflows ke liye popular.
+- Node.js / TypeScript: JavaScript-based full-stack teams aur I/O-heavy APIs.
+- Java / Spring: Large enterprise services.
+- C# / .NET: Microsoft ecosystem aur enterprise applications.
+- Go: Lightweight, concurrent backend services.
+
+Backend responsibilities:
+1. Authentication and authorization.
+2. Input validation.
+3. Business rules.
+4. Model/API calls.
+5. Database and file access.
+6. Rate limits and quotas.
+7. Logging, error handling and audit.
+8. Human approval workflows.
+
+### 4. AI / ML framework layer
+
+Frameworks model build, train, fine-tune ya run karne mein help karte hain.
+
+| Framework / Library | Simple explanation | Typical use |
+|---|---|---|
+| PyTorch | Deep learning framework | Neural network training |
+| TensorFlow | ML/deep learning ecosystem | Model development and deployment |
+| Keras | High-level neural network API | Rapid model prototyping |
+| Hugging Face Transformers | Pretrained model ecosystem | NLP, vision and multimodal models |
+| scikit-learn | Traditional ML library | Classification, regression, clustering |
+| XGBoost | Gradient-boosted trees | Structured/tabular prediction |
+
+Choose framework based on task, ecosystem, hardware support, model compatibility and team expertise. Framework use karna aur model train karna same cheez nahi: framework toolset hai; model learned parameters aur architecture ka combination hai.
+
+### 5. Model access and serving
+
+AI model use karne ke do broad approaches:
+
+**Hosted model API**
+- Provider ka model remote infrastructure par run hota hai.
+- Application secure backend se API request bhejti hai.
+- Infrastructure manage karne ka burden kam ho sakta hai.
+- Data handling, pricing, rate limits, availability aur provider terms evaluate karne hote hain.
+
+**Self-hosted / open-weight model**
+- Team apne infrastructure par model run karti hai.
+- Runtime, GPU/CPU, memory, scaling aur updates manage karne hote hain.
+- Deployment aur data control zyada mil sakta hai, lekin operations ki responsibility bhi badhti hai.
+- Model license aur usage conditions check karna zaroori hai.
+
+### 6. Database and storage stack
+
+AI application mein different data ke liye different storage use ho sakta hai.
+
+- Relational database: Users, roles, billing, tasks aur structured records.
+- Document database: Flexible JSON-like records.
+- Vector index/database: Embeddings ke through semantic similarity search.
+- Object storage: PDFs, images, audio, video aur datasets.
+- Cache: Frequently requested data aur short-lived state.
+
+Vector database normal database ka complete replacement nahi hai. User permissions, source documents aur business records ko authoritative storage mein maintain karein.
+
+### 7. API and integration layer
+
+API frontend, backend, model provider aur external tools ko communicate karne ka standard interface deti hai.
+
+Common patterns:
+- REST/HTTP: Web applications ke liye common request-response interface.
+- GraphQL: Client ko required fields query karne ka flexible pattern.
+- gRPC: Service-to-service communication ke liye efficient RPC framework.
+- WebSocket / Server-Sent Events: Live updates ya streamed responses.
+
+AI API integration mein timeout, retries, rate limits, authentication, input/output validation aur error handling plan karein.
+
+### 8. DevOps and infrastructure stack
+
+- Git: Source code version history.
+- GitHub: Repository aur collaboration.
+- Docker: Application ko container image mein package karna.
+- Kubernetes: Containers ko orchestrate karna; har project ko zaroori nahi.
+- CI: Code changes par automated tests/build.
+- CD: Approved changes ko environment mein release.
+- Cloud platforms: Compute, storage, networking aur managed services.
+- Monitoring: Logs, metrics, traces aur alerts.
+
+Small application ke liye simple managed hosting + database + CI pipeline enough ho sakta hai. Scale aur operational needs badhne par container orchestration jaise tools consider karein.
+
+### 9. Example — AI Chat Application ka stack
+
+| Component | Example choice | Responsibility |
+|---|---|---|
+| UI | React + TypeScript | Chat screen and file upload |
+| Backend | Python + FastAPI | Auth, validation and orchestration |
+| Model | Hosted LLM API | Generate answer |
+| Database | PostgreSQL | Users and conversations |
+| Vector search | pgvector | Knowledge retrieval |
+| Cache | Redis | Short-lived cache / rate counters |
+| File storage | Object storage | Uploaded documents |
+| Deployment | Docker + cloud service | Run application |
+| CI/CD | GitHub Actions | Automated checks and release |
+| Monitoring | OpenTelemetry-compatible tools | Observe latency and failures |
+
+Ye sirf illustrative stack hai. Iska matlab ye nahi ki har AI app ko exactly yehi technologies use karni chahiye.
+
+### 10. End-to-end request flow
+
+```text
+User
+ |
+ v
+Frontend (React)
+ |
+ | HTTPS request
+ v
+Backend API (Python / Node.js)
+ |
+ +---- Authentication & Validation
+ |
+ +---- Business Rules
+ |
+ +---- Database / File Storage
+ |
+ v
+AI Orchestrator
+ |
+ +---- Knowledge Retrieval (optional)
+ |
+ +---- Model API / Self-hosted Model
+ |
+ v
+Output Validation
+ |
+ v
+Backend Response
+ |
+ v
+Frontend displays answer
+```
+
+Example: User asks a question. Backend identity verify karta hai, permitted documents retrieve karta hai, model ko question + relevant context deta hai, output validate karta hai aur answer UI ko return karta hai.
+
+### 11. Stack choose kaise karein?
+
+1. Problem aur product requirements define karein.
+2. Team ki existing skills dekhein.
+3. Data sensitivity aur deployment restrictions samjhein.
+4. Hosted API vs self-hosted model compare karein.
+5. Expected traffic, latency aur budget estimate karein.
+6. Simple stack se prototype banayein.
+7. Security, tests, monitoring aur backup add karein.
+8. Measured need hone par hi extra services introduce karein.
+
+### 12. Common mistakes
+
+- Sirf trend dekhkar bahut saare frameworks select karna.
+- Frontend mein secret API keys rakhna.
+- AI model ko bina validation ke direct database write permission dena.
+- Har task ke liye microservices aur Kubernetes use karna.
+- Logs mein sensitive user content unnecessarily save karna.
+- Development aur production configuration mix karna.
+- Model/API cost, rate limits aur failure fallback ignore karna.
+
+### 13. Practice exercise
+
+Ek basic AI FAQ application ka stack design karein. Ismein ye decide karein:
+1. Frontend technology.
+2. Backend language/framework.
+3. Model access approach.
+4. User aur FAQ data storage.
+5. API communication method.
+6. Deployment method.
+7. Authentication, monitoring aur backup approach.
+
+Har choice ke saamne ek line likhein: "Maine ye technology kyun choose ki?"
+
+### 14. Knowledge check
+
+1. AI Development Stack ka meaning kya hai?
+2. Frontend aur backend mein kya difference hai?
+3. PyTorch aur pretrained AI model ek hi cheez hain?
+4. Hosted model API aur self-hosted model mein kya trade-off hai?
+5. Vector search aur relational database ka role alag kyun hota hai?
+6. Docker aur Kubernetes ka basic purpose kya hai?
+7. Frontend mein secret API key rakhna unsafe kyun hai?
+8. Kya har small AI application ko microservices aur Kubernetes chahiye?
+
+### 15. Topic summary
+
+- Stack mein frontend, backend, AI framework/model, database, APIs, infrastructure aur monitoring shamil ho sakte hain.
+- Python AI/ML ecosystem mein popular hai, lekin backend ke liye only option nahi.
+- Hosted model APIs setup ko simple kar sakti hain; self-hosting mein infrastructure control ke saath operations bhi manage karne padte hain.
+- Different data needs ke liye relational DB, vector search, cache aur object storage combine ho sakte hain.
+- Security, validation, cost, monitoring aur backup stack ka essential part hain.
+- Best stack wahi hai jo requirements ko minimum unnecessary complexity ke saath solve kare.
+
+### Official learning references
+
+- Python: https://docs.python.org/3/
+- FastAPI: https://fastapi.tiangolo.com/
+- React: https://react.dev/learn
+- PyTorch: https://pytorch.org/docs/stable/index.html
+- TensorFlow: https://www.tensorflow.org/learn
+- Hugging Face: https://huggingface.co/docs
+- Docker: https://docs.docker.com/
+- Kubernetes: https://kubernetes.io/docs/
+- PostgreSQL: https://www.postgresql.org/docs/
+- OpenTelemetry: https://opentelemetry.io/docs/
+
+---
+
+**Progress:** Phase 1 Topics 01–04 drafted. Topic 05 — Programming Languages for AI is next.
