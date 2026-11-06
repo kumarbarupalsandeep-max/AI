@@ -23,7 +23,7 @@ AI ko Basic se Advanced level tak step-by-step samajhna: AI kaise kaam karta hai
 | 06 | Deep Learning | Covered |
 | 07 | Generative AI & Large Language Models | Covered |
 | 08 | AI Agents & Automation | Covered |
-| 09 | AI Development & System Architecture | In Progress — In Progress — Phase 2, Topic 07 drafted |
+| 09 | AI Development & System Architecture | In Progress — In Progress — Phase 2, Topics 07–08 drafted |
 | 10 | AI Infrastructure, MLOps & Deployment | Planned |
 | 11 | AI Security, Privacy & Governance | Planned |
 | 12 | Real-World AI Products & Business | Planned |
