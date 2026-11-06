@@ -829,3 +829,238 @@ The example endpoint is illustrative, not a live AI service. Production applicat
 ---
 
 **Progress:** Phase 1 Topics 01–05 drafted. Topic 06 — AI Development Tools is next.
+
+
+## Topic 06 — AI Development Tools
+
+AI development tools code likhne, experiments karne, models integrate karne, APIs test karne, code changes track karne, applications package/deploy karne aur production monitor karne mein help karte hain. Har project ko har tool ki zaroorat nahi hoti.
+
+### 1. Main tool categories
+
+| Category | Main purpose | Examples |
+|---|---|---|
+| Code editor / IDE | Code write, navigate and debug | VS Code, PyCharm |
+| Notebook | Interactive experiments | Jupyter, Google Colab |
+| ML framework | Model build and train | PyTorch, TensorFlow, scikit-learn |
+| Model hub / runtime | Discover or execute models | Hugging Face Hub, Ollama, vLLM, ONNX Runtime |
+| API testing | Test requests and responses | Postman, Insomnia |
+| Version control | Track source code changes | Git, GitHub |
+| Containers | Package applications | Docker |
+| Orchestration | Manage container deployments | Kubernetes |
+| Database clients | Inspect and administer databases | pgAdmin, DBeaver, Redis Insight, MongoDB Compass |
+| Monitoring | Observe errors and performance | Sentry, Prometheus, Grafana, OpenTelemetry |
+
+### 2. Code editors and IDEs
+
+**Visual Studio Code (VS Code):** General-purpose code editor with extensions, terminal, debugging and language support. Useful for frontend, backend and AI project code.
+
+**PyCharm:** Python-focused IDE with code navigation, debugging and testing features. Useful for Python backend and ML projects.
+
+IDE ka full form Integrated Development Environment hai. Ismein editor aur development-related tools ek environment mein milte hain.
+
+### 3. Notebook tools
+
+**Jupyter Notebook:** Code ko cells mein run karna, data explore karna, charts dekhna aur experiments document karna.
+
+**Google Colab:** Browser-based hosted notebook environment. Available runtime aur account conditions ke hisaab se accelerator/GPU access mil sakta hai.
+
+Example workflow: dataset load → data clean → model train → metrics evaluate. Notebook interactive learning aur experimentation ke liye useful hai; production serving ka replacement nahi.
+
+### 4. AI and ML tools
+
+| Tool | Role |
+|---|---|
+| PyTorch | Deep learning model development and training |
+| TensorFlow | ML/deep learning development ecosystem |
+| Hugging Face Transformers | Pretrained model libraries |
+| scikit-learn | Traditional machine learning |
+| Hugging Face Hub | Models and datasets discover/share karna |
+
+Framework, model aur runtime alag concepts hain: framework development/training tools deta hai; model learned system hai; runtime model ko execute/serve karta hai.
+
+### 5. Model platforms and runtimes
+
+| Tool | Main role |
+|---|---|
+| Hugging Face Hub | Models and datasets discover/share |
+| Ollama | Supported models ko local machine par run karna |
+| vLLM | LLM inference and serving |
+| ONNX Runtime | Supported ONNX models execute/optimize karna |
+
+Local model use karne se pehle hardware needs, model license, data handling aur performance test karein. Hosted API aur self-hosted runtime ke trade-offs alag hote hain.
+
+### 6. API testing tools
+
+**Postman** aur **Insomnia** APIs ko test karne ke tools hain. Developer request method, URL, headers, authentication aur body set karke response inspect kar sakta hai.
+
+Illustrative request:
+
+```http
+POST /api/chat
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "message": "Explain Artificial Intelligence"
+}
+```
+
+Test checklist:
+1. Request server tak pahunch rahi hai?
+2. Authentication valid hai?
+3. Input validation kaam kar rahi hai?
+4. Expected status code aur response mil raha hai?
+5. Error cases handle ho rahe hain?
+6. Latency aur rate limits acceptable hain?
+
+`YOUR_TOKEN` placeholder hai. Real credentials ko secure secret storage mein rakhein.
+
+### 7. Version control and collaboration
+
+**Git** distributed version control system hai. Code history track, branch, compare aur merge kar sakte hain.
+
+**GitHub** repository hosting aur collaboration platform hai. Ismein pull requests, issues, reviews aur automation workflows ho sakte hain.
+
+Common commands:
+
+```bash
+git init
+git add .
+git commit -m "Add AI feature"
+git push
+```
+
+- `git init`: local repository initialize.
+- `git add`: changes stage.
+- `git commit`: local history mein save.
+- `git push`: commits remote repository par bhejna.
+
+Secrets, passwords aur private API keys repository mein commit/push nahi karne chahiye.
+
+### 8. Containers and orchestration
+
+**Docker:** Application aur dependencies ko container image mein package karne mein help karta hai.
+
+```bash
+docker build -t my-ai-app .
+docker run -p 8000:8000 my-ai-app
+```
+
+**Kubernetes:** Containerized applications ko deploy, scale aur manage karne ka orchestration platform hai. Small application ke liye shuru se Kubernetes zaroori nahi.
+
+### 9. Database management tools
+
+| Tool | Purpose |
+|---|---|
+| pgAdmin | PostgreSQL database administration |
+| DBeaver | Multiple database systems ke saath kaam |
+| Redis Insight | Redis data/cache inspect karna |
+| MongoDB Compass | MongoDB collections aur documents explore karna |
+
+Database clients data inspect aur manage karne mein help karte hain; ye database server ka replacement nahi hain.
+
+### 10. Monitoring and debugging
+
+| Tool | Purpose |
+|---|---|
+| Sentry | Application errors identify karna |
+| Prometheus | Metrics collect karna |
+| Grafana | Dashboards aur metrics visualization |
+| OpenTelemetry | Logs, metrics aur traces ke liye instrumentation |
+
+AI system mein monitor karein:
+- API latency and failure rate.
+- Model errors and response quality.
+- Token/compute usage and cost.
+- Request volume and database performance.
+- Security and access events.
+
+Sensitive user data ko logs mein unnecessary store na karein; access aur retention policies apply karein.
+
+### 11. Example — AI chatbot development workflow
+
+1. VS Code mein frontend aur backend code likhein.
+2. Jupyter/Colab mein data aur model experiments karein.
+3. Python framework ya model API se AI capability integrate karein.
+4. Postman se backend endpoints test karein.
+5. Git/GitHub se changes version aur collaborate karein.
+6. Docker se application package karein.
+7. Cloud environment mein deploy karein.
+8. Monitoring tools se errors, performance aur usage observe karein.
+
+### 12. Beginner vs production tooling
+
+| Beginner workflow | Production workflow |
+|---|---|
+| VS Code | Editor + automated checks |
+| Jupyter notebook | Reproducible training pipelines |
+| Colab experiments | Managed compute/GPU infrastructure |
+| Manual API tests | Automated API test suites |
+| Basic Git usage | Protected branches and CI/CD |
+| Local Docker | Container orchestration if required |
+| Basic application logs | Centralized logs, metrics and traces |
+
+Advanced tooling automatically better nahi hoti. Tool ko actual scale, reliability aur team needs justify karni chahiye.
+
+### 13. Common mistakes
+
+- Bahut saare tools install karna without understanding their purpose.
+- Notebook experiments ko production-ready application samajhna.
+- GitHub par credentials push karna.
+- API testing aur error cases skip karna.
+- Unnecessary Kubernetes/microservices add karna.
+- Monitoring aur backup ignore karna.
+- Model output ko evaluate kiye bina reliable assume karna.
+
+### 14. Practice exercise
+
+Ek basic AI FAQ application ke development environment ka plan banayein:
+1. Code editor select karein.
+2. Python environment prepare karein.
+3. Notebook mein small experiment run karein.
+4. Backend ka sample endpoint banayein.
+5. Postman se endpoint test karein.
+6. Git repository mein code commit karein.
+7. Docker packaging ka practice karein.
+8. Basic errors aur response time track karein.
+
+### 15. Knowledge check
+
+1. VS Code aur Jupyter Notebook mein kya difference hai?
+2. PyTorch aur Hugging Face ka role kya hai?
+3. Postman ka use kyun hota hai?
+4. Git aur GitHub mein kya difference hai?
+5. Docker application ko kaise help karta hai?
+6. Kubernetes kab useful hota hai?
+7. Prometheus aur Grafana ka kya role hai?
+8. API keys ko repository mein push karna unsafe kyun hai?
+
+### 16. Topic summary
+
+- Code editors code writing aur debugging mein help karte hain.
+- Notebook tools interactive experiments aur data analysis ke liye useful hain.
+- AI frameworks aur model runtimes model development/execution mein help karte hain.
+- Postman APIs test karta hai.
+- Git/GitHub code history aur collaboration manage karte hain.
+- Docker packaging aur Kubernetes container orchestration ke liye hain.
+- Monitoring tools errors, performance aur usage track karte hain.
+- Project ke actual requirements ke hisaab se tools select karna best practice hai.
+
+### Official learning references
+
+- VS Code: https://code.visualstudio.com/docs
+- Jupyter: https://docs.jupyter.org/
+- Google Colab: https://colab.research.google.com/
+- PyTorch: https://pytorch.org/tutorials/
+- TensorFlow: https://www.tensorflow.org/tutorials
+- Hugging Face: https://huggingface.co/docs
+- Postman: https://learning.postman.com/
+- Git: https://git-scm.com/doc
+- Docker: https://docs.docker.com/
+- Kubernetes: https://kubernetes.io/docs/
+- Prometheus: https://prometheus.io/docs/
+- Grafana: https://grafana.com/docs/
+
+---
+
+**Progress:** Phase 1 Topics 01–06 drafted. Phase 2 — Topic 07: AI System Architecture is next.
