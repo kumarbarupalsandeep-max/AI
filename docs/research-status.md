@@ -16,7 +16,7 @@
 | 06 | Deep Learning | Covered | Neural networks, weights/bias, activation, forward/backpropagation, optimizers, ANN/CNN/RNN/LSTM/Transformers, transfer learning, MNIST project |
 | 07 | Generative AI & LLM | Covered | Tokens, tokenization, embeddings, Transformers, pretraining, fine-tuning, prompting, context, RAG, multimodal AI, API architecture, knowledge assistant |
 | 08 | AI Agents & Automation | Covered | Agent loop, tools/function calling, planning, memory/state, single/multi-agent, orchestration, workflows, human approval, guardrails, evaluation, practical project |
-| 09 | AI Development & System Architecture | In Progress — Phase 1, Topics 01–03 | AI development fundamentals, lifecycle, application categories, common architecture layers; stack and detailed architecture topics are next |
+| 09 | AI Development & System Architecture | In Progress — Phase 1, Topics 01–04 | AI development fundamentals, lifecycle, application categories, common architecture layers, technology stack |
 | 10 | AI Infrastructure & Deployment | Pending | GPU/CPU, cloud, containers, MLOps, monitoring, scaling |
 | 11 | AI Security, Privacy & Governance | Pending | Threats, prompt injection, data protection, evaluation, compliance, responsible AI |
 | 12 | AI Products & Business | Pending | AI SaaS, enterprise use cases, product strategy, costs, pricing, business models |
@@ -28,8 +28,8 @@
 | Phase 1 — AI Development Fundamentals | 01. Introduction to AI Development | Drafted |
 | Phase 1 — AI Development Fundamentals | 02. AI Development Lifecycle | Drafted |
 | Phase 1 — AI Development Fundamentals | 03. AI Application Types | Drafted |
-| Phase 1 — AI Development Fundamentals | 04. AI Development Stack | Next |
-| Phase 1 — AI Development Fundamentals | 05. Programming Languages for AI | Pending |
+| Phase 1 — AI Development Fundamentals | 04. AI Development Stack | Drafted |
+| Phase 1 — AI Development Fundamentals | 05. Programming Languages for AI | Next |
 | Phase 1 — AI Development Fundamentals | 06. AI Development Tools | Pending |
 | Phase 2 onward | System architecture, model development, infrastructure, deployment and enterprise architecture | Pending |
 
@@ -44,7 +44,7 @@
 - Chapter 06: Deep Learning notes created.
 - Chapter 07: Generative AI & LLM notes created.
 - Chapter 08: AI Agents & Automation notes created.
-- Chapter 09: AI Development & System Architecture — Phase 1 Topics 01–03 drafted and added.
+- Chapter 09: AI Development & System Architecture — Phase 1 Topics 01–04 drafted and added.
 - Learning resource index created.
 - Research status tracker updated.
 
@@ -63,4 +63,4 @@
 
 ## Next step
 
-Chapter 09 — Topic 04: AI Development Stack.
+Chapter 09 — Topic 05: Programming Languages for AI.
